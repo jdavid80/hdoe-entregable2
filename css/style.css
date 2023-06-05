@@ -7,155 +7,128 @@ h1 {
     text-align: center;
 }
 nav {
-  height: 70px;
+  height: 80px;
 }
 .main-gears {
   width: 100%;
- /*  background-color: darkcyan; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .gears-box {
   width: 800px;
-  /* background-color: blue; */
+  margin-left: -230px;
 }
-.strategic-box {
-  /* background-color: red; */
-  margin: 0 auto;
-   width: 400px;
- /* display: grid;
-  grid-template: "empty-izq strategic-icon empty-der"
-                 "empty-izq strategic-text empty-der" /
-                  1fr       400px          1fr; */
-}
-.strategic-icon {
-  /* grid-area: strategic-icon; */
-  font-size: 25em;
-  color: rgb(10, 13, 185);
-  animation-name: girar-strategic;
-  animation-duration: 20s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  display: inline-block;
-}
-.strategic-text {
+.icon-text {
+  font-family: 'Poppins', sans-serif;
   position: relative;
-  /* grid-area: strategic-text; */
   font-size: 1.2em;
-  text-align: center;
-  top: -210px;
+  margin-left: 110px;
+  margin-right: 110px;
+  height: 170px;
+  top: -285px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-/* .miss-admin-box {
-  width: 100%;
-  background-color: blue;
-  display: grid;
-  grid-template: "empty-izq  missionary-icon admin-icon empty-der"
-                  /* "empty-izq missionary-text admin-text empty-der"  /
-                   1fr       400px           400px      1fr;
-} */
-.missionary-box {
-  /* background-color: green; */
-   width: 400px;
-   position: relative;
-   top: -70px;
-   left: 90px;
+.center-text {
+  font-weight: 700;
 }
-.missionary-icon {
-  /* grid-area: missionary-icon; */
-  font-size: 25em;
-  color: green;
-  animation-name: girar-missionary;
-  animation-duration: 20s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  display: inline-block;
-}
-.missionary-text {
-  position: relative;
-  grid-area: missionary-text;
-  font-size: 1.2em;
-  text-align: center;
-  height: 150px;
-  line-height: 120px;
-  top: -270px;
-}
-.missionary-text:hover {
+.icon-text:hover {
   cursor: pointer;
 }
-.admin-box {
-  /* background-color: yellow; */
+.strategic-box {
+  margin: 0 auto;
+  width: 400px;
+}
+.missionary-box {
    width: 400px;
    position: relative;
-   top: -520px;
-   left: 450px;
+   top: -200px;
+   left: 100px;
 }
-.admin-icon {
-  font-size: 25em;
-  color: rgb(189,39,36);
-  animation-name: girar-admin;
-  animation-duration: 20s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  display: inline-block;
-}
-.admin-text {
+.admin-box {
+  width: 400px;
   position: relative;
-  font-size: 1.2em;
-  text-align: center;
-  top: -200px;
+  top: -665px;
+  left: 465px;
 }
 .finance-box {
-  /* background-color: dodgerblue; */
    width: 400px;
    position: relative;
-   top: -1320px;
-   left: 570px;
+   top: -1600px;
+   left: 565px;
+}
+.strategic-icon {
+  color: rgb(10, 13, 185);
+}
+.missionary-icon {
+  color: green;
+}
+.admin-icon {
+  color: rgb(189,39,36);
 }
 .finance-icon {
-  font-size: 25em;
   color: rgb(64,64,64,.8);
-  animation-name: girar-finance;
-  animation-duration: 20s;
+}
+.box-message-hidden {
+  display: none;
+}
+.box-message-visible {
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  position: fixed;
+  background-color: rgb(0,0,0, .9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+.strategic-message {
+  width: 400px;
+  height: 300px;
+  border-radius: 10px;
+  background-color: whitesmoke;
+}
+.cerrar-box {
+  font-size: 1.5em;
+  font-weight: 700;
+  position: relative;
+  left: 370px;
+  cursor: pointer;
+}
+.animation-forward {
+  font-size: 25em;
+  animation-name: rotate-forward;
+  animation-duration: 35s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   display: inline-block;
 }
-.finance-text {
-  position: relative;
-  font-size: 1.2em;
-  text-align: center;
-  top: -200px;
+.animation-back {
+  font-size: 25em;
+  animation-name: rotate-back;
+  animation-duration: 35s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  display: inline-block;
 }
-@keyframes girar-strategic {
+@keyframes rotate-forward {
   from {
       transform: rotate(0deg);
   } to {
       transform: rotate(360deg);
   }
 }
-@keyframes girar-missionary {
+@keyframes rotate-back {
   from {
       transform: rotate(360deg);
   } to {
       transform: rotate(0deg);
   }
 }
-@keyframes girar-admin {
-  from {
-      transform: rotate(0deg);
-  } to {
-      transform: rotate(360deg);
-  }
-}
-@keyframes girar-finance {
-  from {
-      transform: rotate(360deg);
-  } to {
-      transform: rotate(0deg);
-  }
-}
-
 /* poppins-regular - latin */
 @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
