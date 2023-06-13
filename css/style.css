@@ -3,75 +3,183 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
-h1 {
+h1, h2 {
     text-align: center;
 }
 nav {
   height: 80px;
 }
+.box-in-out {
+  width: 180px;
+  height: 735px;
+  background-color: rgb(100,100,100);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.entradas {
+  position: absolute;
+}
+.salidas {
+  position: relative;
+  top: -1170px;
+  left: 1350px; 
+}
 .main-gears {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 .gears-box {
-  width: 800px;
-  margin-left: -230px;
+  width: 1530px;
+  height: 736px;
+  border-bottom: 20px solid rgb(48,48,48);
 }
 .icon-text {
   font-family: 'Poppins', sans-serif;
   position: relative;
   font-size: 1.2em;
-  margin-left: 110px;
-  margin-right: 110px;
-  height: 170px;
-  top: -285px;
-  border-radius: 50%;
+  top: -248px;
+  left: 104px;
+  height: 144px;
+  width: 144px;
+  border-radius: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  color: rgb(64,64,64);
+}
+.icon-text-missionary {
+  height: 183px;
+  width: 183px;
+  top: -315px;
+  left: 132px;
+}
+.icon-text:hover {
+  background-color: #bee3f0e6;
+}
+.icon-text:hover .icon-click {
+  color: #077e90;
+}
+.icon-click {
+  font-size: 2.5em;
+  position: relative;
+  color: rgb(161, 168, 32);
+  top: 10px;
+}
+.icon-click-missionary {
+  font-size: 3.5em;
+  top: 10px;
+}
+.icon-click:hover {
+  color: #17a2b8;
+}
+.icon-text-apoyo {
+  top: -250px;
 }
 .center-text {
   font-weight: 700;
+  text-align: center;
+  line-height: 1.3em;
+  position: relative;
+  top: 10px;
+}
+.center-text-missionary {
+  top: 25px;
 }
 .icon-text:hover {
   cursor: pointer;
 }
-.strategic-box {
-  margin: 0 auto;
-  width: 400px;
-}
+
 .missionary-box {
-   width: 400px;
-   position: relative;
-   top: -200px;
-   left: 100px;
+  width: 450px;
+  height: 450px;
+  position: relative;
+  top: 70px;
+  left: 220px;
+}
+.strategic-box {
+  position: relative;
+  top: -65px;
+  left: -285px;
+  margin: 0 auto;
+  width: 358px;
+  height: 360px;
 }
 .admin-box {
   width: 400px;
   position: relative;
-  top: -665px;
-  left: 465px;
+  top: -425px;
+  left: 535px;
+  width: 355px;
+  height: 360px;
 }
-.finance-box {
+/* .finance-box {
    width: 400px;
    position: relative;
    top: -1600px;
    left: 565px;
-}
+} */
 .strategic-icon {
-  color: rgb(10, 13, 185);
+  color: #0d47a1;
 }
 .missionary-icon {
-  color: green;
+  color: #007E33
 }
 .admin-icon {
   color: rgb(189,39,36);
 }
 .finance-icon {
-  color: rgb(64,64,64,.8);
+  color: FF8800;
 }
+
+
+.animation-forward {
+  font-size: 25em;
+  animation-name: rotate-forward;
+  animation-duration: 35s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  display: inline-block;
+}
+.animation-back-missionary {
+  font-size: 28em;
+  animation-name: rotate-back;
+  animation-duration: 35s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  display: inline-block;
+}
+.animation-forward {
+  font-size: 22em;
+  animation-name: rotate-forward;
+  animation-duration: 35s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  display: inline-block;
+}
+.btn-subprocesos {
+  background-color: #33b5e5;
+  color: white;
+  border: none;
+  font-size: .7em;
+  padding: 7px;
+  border-radius: 5px;
+  position: relative;
+  text-align: center;
+}
+.btn-subprocesos:hover  {
+  cursor: pointer;
+  background-color: #0e8ebd;
+  font-size: 1.1em;
+}
+
+/* Interactive */
+
+
 .box-message-hidden {
   display: none;
 }
@@ -86,34 +194,49 @@ nav {
   align-items: center;
   z-index: 20;
 }
-.strategic-message {
+.missionary-message {
   width: 400px;
-  height: 300px;
+  height: 400px;
   border-radius: 10px;
   background-color: whitesmoke;
 }
+.strategic-message {
+  width: 400px;
+  height: 400px;
+  border-radius: 10px;
+  background-color: whitesmoke;
+}
+.apoyo-message {
+  width: 400px;
+  height: 400px;
+  border-radius: 10px;
+  background-color: whitesmoke;
+}
+.missionary-message-box {
+  display: none;
+}
+.strategic-message-box {
+  display: none;
+}
+.apoyo-message-box {
+  display: none;
+}
+.missionary-message-hidden {
+  display: none;
+}
+.strategic-message-hidden {
+  display: none;
+}
+.apoyo-message-hidden {
+  display: none;
+}
+
 .cerrar-box {
   font-size: 1.5em;
   font-weight: 700;
   position: relative;
   left: 370px;
   cursor: pointer;
-}
-.animation-forward {
-  font-size: 25em;
-  animation-name: rotate-forward;
-  animation-duration: 35s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  display: inline-block;
-}
-.animation-back {
-  font-size: 25em;
-  animation-name: rotate-back;
-  animation-duration: 35s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  display: inline-block;
 }
 @keyframes rotate-forward {
   from {
