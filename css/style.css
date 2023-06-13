@@ -75,8 +75,8 @@ nav {
 .arrow-forward-1 {
   position: absolute;
   color: rgb(64,64,64);
-  top: 1550px;
-  margin-left: 190px;
+  top: 1450px;
+  margin-left: 200px;
   font-size: 12em;
   z-index: -5;
 }
@@ -439,13 +439,13 @@ input[type="checkbox"]:hover {
   .arrow-forward-1 {
     position: relative;
     color: rgb(64,64,64);
-    top: 340px;
+    top: 280px;
     margin-left: 163px;
     font-size: 5em;
   }
   .arrow-forward-2 {
     float: right;
-    margin-top: -570px;
+    margin-top: -630px;
     margin-right: 160px;
     font-size: 5em;
   }
